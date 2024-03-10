@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+         article {
+            position: fixed;
+            margin-left: 10px;
+        }
+          #navlist {
+            background-color: #0074D9;
+            position: fixed;
+            left: 45%;
+            top: -60px;
+            width: auto;
+            display: block;
+            transition: top 0.3s;
+        }
+         #navlist a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+       #navlist a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1 style="color: orange;font-family:cursive;">
+            ABC CORPORATIONS
+        </h1>
+        <p style="color: black;font-family: cursive;">
+            We as a corporation aim to provide top notch IT services to our clients through our hardworking and always ready family of employees. We are always foremost for nation building.   
+        </p>
+        <p style="color:green;font-family: cursive;">
+            This is our official website and u can use the slide down navigation bar to access all our facilities and services.
+        </p>
+    </article>
+    <div id="navlist">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Our Products</a>
+        <a href="#">Opportunities</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="scrollable"
+    style="padding:15px 15px 4500px;">
+    </div>
+    <script>
+        window.onscroll = function() {
+               scroll()
+           };
+    
+           function scroll() {
+               if (document.body.scrollTop > 20 || 
+                       document.documentElement.scrollTop > 20)
+               {
+                   document.getElementById("navlist").style.top
+                               = "0";
+               }
+               else {
+                   document.getElementById("navlist").style.top
+                               = "-60px";
+               }
+           }
+       </script>
+</body>
+</html>
